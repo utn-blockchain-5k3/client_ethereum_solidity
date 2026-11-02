@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>UTN · Cliente Ethereum</title></head>
+<body><main><p class="eyebrow">UTN · BLOCKCHAIN · CLASE 12</p><h1>De Solidity al navegador</h1>
+<p>El mismo MiContrato de Hardhat, ahora con una interfaz web.</p>
+<section><h2>1. Conectá tu billetera</h2><button id="connect">Conectar MetaMask</button><button id="refresh" disabled>Actualizar estado</button><p id="account">Sin conexión</p><p id="deployment"></p></section>
+<section><h2>2. Consultá el contrato</h2><dl><dt>Saludo global</dt><dd id="greeting">—</dd><dt>Owner</dt><dd id="owner">—</dd><dt>Contador</dt><dd id="counter">—</dd><dt>Tu mensaje</dt><dd id="message">—</dd><dt>Tus interacciones</dt><dd id="interactions">—</dd></dl></section>
+<section><h2>3. Enviá una transacción</h2><form id="greetingForm"><label for="greetingInput">Nuevo saludo global</label><input id="greetingInput" required maxlength="280"><button data-write disabled>Guardar saludo</button></form>
+<form id="messageForm"><label for="messageInput">Mensaje personal (público en blockchain)</label><input id="messageInput" required maxlength="280"><button data-write disabled>Guardar mensaje</button></form><button id="increment" data-write disabled>Incrementar contador · solo owner</button></section>
+<section aria-live="polite"><h2>Actividad</h2><p id="status">Desplegá el contrato y conectá MetaMask para empezar.</p><pre id="receipt"></pre></section>
+</main><script type="module" src="/src/main.js"></script></body></html>
